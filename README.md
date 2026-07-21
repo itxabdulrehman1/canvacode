@@ -309,8 +309,7 @@ This project reinforced the importance of modular architecture, state management
 # 👥 Team
 
 - Abdul Rehman
-- Muhammad Hasaan
-- Muhammad Zaeem
+- Muhammad Owaif
 
 ---
 
