@@ -34,13 +34,31 @@ Unlike existing AI builders that only generate UI or require constant prompting,
 - 💾 SQLite Project Persistence
 - 🖥 Desktop Application powered by Electron
 
-## Human + AI Collaboration
+## Human + CODEX & GPT-5.6 Collaboration
 
 While Codex significantly accelerated development, all major architectural decisions, product vision, workflow design, feature planning, and final implementation decisions were made by the development team.
 
 This collaborative workflow allowed us to rapidly prototype, iterate, and build a complex desktop application while maintaining full control over the software architecture and user experience.
 
 OpenAI Codex enabled us to spend less time writing repetitive boilerplate and more time solving challenging engineering problems that make CanvasCode unique.
+
+#  CODEX-Assisted Development
+
+CanvasCode was developed using an AI-assisted engineering workflow throughout the project lifecycle.
+
+Instead of using AI only for code completion, we used CODEX in the software development process to accelerate architecture design, feature implementation, debugging, and iterative refinement.
+
+### OpenAI Codex
+
+OpenAI Codex was used to:
+
+- Scaffold complex React and Electron modules.
+- Generate repetitive TypeScript boilerplate.
+- Implement React Flow interactions.
+- Accelerate backend API development.
+- Refactor components into reusable modules.
+- Resolve implementation issues during development.
+- Speed up debugging and iteration.
 
 ---
 
@@ -309,7 +327,7 @@ This project reinforced the importance of modular architecture, state management
 # 👥 Team
 
 - Abdul Rehman
-- Muhammad Owaif
+- Owaif Amir
 
 ---
 
@@ -317,6 +335,6 @@ This project reinforced the importance of modular architecture, state management
 
 This project was created for **OpenAI Build Week**.
 
-We would like to thank **OpenAI** for organizing the hackathon and providing tools such as **OpenAI Codex**, which played a significant role in accelerating development, code generation, debugging, and iterative software engineering throughout the project.
+We would like to thank **OpenAI** for organizing the hackathon and providing tools such as **OpenAI Codex & GPT-5.6**, which played a significant role in accelerating development, code generation, debugging, and iterative software engineering throughout the project.
 
 We also acknowledge the open-source communities behind React, Next.js, Electron, React Flow, Prisma, Tailwind CSS, Shadcn UI, and the many tools that made this project possible.
