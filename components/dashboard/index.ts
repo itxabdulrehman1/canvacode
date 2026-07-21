@@ -1,0 +1,5 @@
+export { WelcomeBanner } from './WelcomeBanner'
+export { RecentProjects } from './RecentProjects'
+export { QuickActions } from './QuickActions'
+export { StatCard } from './StatCard'
+export { RecentActivity } from './RecentActivity'

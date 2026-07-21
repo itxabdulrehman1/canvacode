@@ -1,0 +1,3 @@
+import type { ASTValidationResult, ProjectAST } from './ast.types'
+export interface CompilationPlan { id: string; projectId: string; createdAt: string; summary: string; pages: string[]; components: string[]; forms: string[]; dependencies: string[]; routing: { routes: string[]; protected: boolean }; database: { entities: string[]; relationships: string[] }; api: { endpoints: string[] }; state: string[]; authentication: string[]; warnings: string[]; errors: string[]; suggestions: string[] }
+export interface CompilationResult { plan: CompilationPlan; validation: ASTValidationResult; logs: string[] }

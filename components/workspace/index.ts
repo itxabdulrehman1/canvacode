@@ -1,0 +1,6 @@
+export { WorkspaceShell } from './WorkspaceShell'
+export { WorkspaceSidebar } from './WorkspaceSidebar'
+export { WorkspaceToolbar } from './WorkspaceToolbar'
+export { CanvasAreaPlaceholder } from './CanvasAreaPlaceholder'
+export { InspectorPlaceholder } from './InspectorPlaceholder'
+export { PreviewPlaceholder } from './PreviewPlaceholder'

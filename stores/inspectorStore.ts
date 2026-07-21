@@ -1,0 +1,2 @@
+import { create } from 'zustand'
+export const useInspectorStore = create<{ query: string; setQuery: (query: string) => void; expanded: Record<string, boolean>; toggle: (section: string) => void }>((set) => ({ query: '', expanded: { content: true, layout: true, appearance: true }, setQuery: (query) => set({ query }), toggle: (section) => set((state) => ({ expanded: { ...state.expanded, [section]: !state.expanded[section] } })) }))

@@ -1,0 +1,4 @@
+import type { CanvasDocument, CanvasNodeType } from './canvas-engine.types'
+export interface ASTNode { id: string; nodeType: string; componentType: CanvasNodeType; parentId?: string; children: string[]; properties: Record<string, unknown>; styles: object; layout: Record<string, unknown>; position: { x: number; y: number }; events: string[]; dependencies: string[]; metadata: { version: string; createdAt: string; updatedAt: string; visible: boolean; locked: boolean }; order: number }
+export interface ProjectAST { version: '1.0'; projectId: string; generatedAt: string; viewport: CanvasDocument['viewport']; roots: string[]; nodes: Record<string, ASTNode>; edges: CanvasDocument['edges']; metadata: Record<string, unknown> }
+export interface ASTValidationResult { valid: boolean; errors: string[]; warnings: string[] }

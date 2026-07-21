@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────────
+   Base layer — global resets and defaults
+───────────────────────────────────────────── */
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: #141313;
+    color: #e5e2e1;
+    font-family: 'Geist', system-ui, sans-serif;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  /* Focus ring — accessible, IDE-style */
+  :focus-visible {
+    outline: 2px solid rgba(59, 130, 246, 0.6);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Selection color */
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.3);
+    color: #e5e2e1;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Custom Scrollbar — IDE aesthetic
+───────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #353434;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444748;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* ─────────────────────────────────────────────
+   Dot-grid background — used in Canvas & Blueprint
+───────────────────────────────────────────── */
+.dot-grid {
+  background-image: radial-gradient(#2a2a2a 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dot-grid-dense {
+  background-image: radial-gradient(#353434 1px, transparent 1px);
+  background-size: 12px 12px;
+}
+
+/* ─────────────────────────────────────────────
+   Glass morphism — use sparingly
+───────────────────────────────────────────── */
+.glass {
+  background: rgba(28, 27, 27, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(68, 71, 72, 0.6);
+}
+
+.glass-strong {
+  background: rgba(20, 19, 19, 0.92);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* ─────────────────────────────────────────────
+   SVG path animation — node-graph edges
+───────────────────────────────────────────── */
+.svg-path-anim {
+  stroke-dasharray: 10;
+  animation: dash 30s linear infinite;
+}
+
+@keyframes dash {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Terminal cursor blink
+───────────────────────────────────────────── */
+.terminal-blink::after {
+  content: '█';
+  animation: blink 1s step-end infinite;
+  margin-left: 4px;
+  color: #c4c7c8;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ─────────────────────────────────────────────
+   Terminal line fade-up animation
+───────────────────────────────────────────── */
+.terminal-line {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeUp 0.3s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terminal-line:nth-child(1) { animation-delay: 0.1s; }
+.terminal-line:nth-child(2) { animation-delay: 0.8s; }
+.terminal-line:nth-child(3) { animation-delay: 1.5s; }
+.terminal-line:nth-child(4) { animation-delay: 2.2s; }
+
+/* ─────────────────────────────────────────────
+   Progress glow — compile loader
+───────────────────────────────────────────── */
+.progress-glow {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+}
+
+/* ─────────────────────────────────────────────
+   Glow button — primary CTA
+───────────────────────────────────────────── */
+.glow-button {
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, 0.25),
+    inset 0 0 8px rgba(59, 130, 246, 0.1);
+}
+
+/* ─────────────────────────────────────────────
+   IDE panel resize handle cursor
+───────────────────────────────────────────── */
+.resize-handle-x {
+  cursor: col-resize;
+  user-select: none;
+}
+
+.resize-handle-y {
+  cursor: row-resize;
+  user-select: none;
+}
+
+/* ─────────────────────────────────────────────
+   Electron drag region helper
+───────────────────────────────────────────── */
+.drag-region {
+  -webkit-app-region: drag;
+}
+
+.no-drag {
+  -webkit-app-region: no-drag;
+}
+
+/* ─────────────────────────────────────────────
+   Utility — visually hidden (accessible)
+───────────────────────────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
